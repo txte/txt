@@ -1,13 +1,17 @@
 $ pwd  创建
 $ git init 初始化
-$ git add readme.txt   把文件添加到仓库
-$ git commit -m "wrote a readme file"  把文件提交到仓库“注释” -m后面输入的是本次提交的说明
+$ git add readme.txt   把文件添加到仓库(缓存区stage)
+$ git commit -m "wrote a readme file"  把文件提交到仓库“注释” -m后面输入的是本次提交的说明（分支master）
                                                            1 file changed：1个文件被改动（我们新添加的readme.txt文件）；
                                                            2 insertions：插入了两行内容（readme.txt有两行内容）。
+                                                           需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。
 $ git status 命令可以让我们时刻掌握仓库当前的状态，readme.txt被修改过了，但还没有准备提交的修改。
-$ git diff 看具体修改了什么内容
+$ git diff 看具体修改了什么内容，比较的是工作区文件与暂存区文件的区别
+$ git diff --cached 比较的是暂存区的文件与仓库分支里（上次git commit 后的内容）的区别
 
-$ git log  历史记录
+####版本回退
+$ git log  提交历史
 $ git log --pretty=oneline 版本号
-$ git reset --hard HEAD^ 上个版本   HEAD~10版本号
+$ git reset --hard HEAD^ 上个版本   HEAD~10版本号  HEAD指向的版本就是当前版本
 $ git reset --hard 1094a    可以还原版本  1094a
+$ git reflog 查看命令历史，以便确定要回到未来的哪个版本。
