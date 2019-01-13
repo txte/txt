@@ -6,3 +6,8 @@ $ git commit -m "wrote a readme file"  把文件提交到仓库“注释” -m后面输入的是本
                                                            2 insertions：插入了两行内容（readme.txt有两行内容）。
 $ git status 命令可以让我们时刻掌握仓库当前的状态，readme.txt被修改过了，但还没有准备提交的修改。
 $ git diff 看具体修改了什么内容
+
+$ git log  历史记录
+$ git log --pretty=oneline 版本号
+$ git reset --hard HEAD^ 上个版本   HEAD~10版本号
+$ git reset --hard 1094a    可以还原版本  1094a
