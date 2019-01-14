@@ -24,3 +24,9 @@ $ git log --pretty=oneline 版本号
 $ git reset --hard HEAD^ 上个版本   HEAD~10版本号  HEAD指向的版本就是当前版本
 $ git reset --hard 1094a    可以还原版本  1094a
 $ git reflog 查看命令历史，以便确定要回到未来的哪个版本。
+
+####远程仓库GitHub
+$ git remote add origin git@github.com:txte/txt.git    
+ 远程库的名字就是origin
+$ git push -u origin master   本地库的所有内容推送到远程库上， -u参数，会把本地的master分支内容推送的远程新的master分支，本地的master分支和远程的master分支关联起来
+$ git push origin master  以后的推送或者拉取时就可以简化命令
